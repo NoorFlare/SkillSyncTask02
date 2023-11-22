@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSync_Task2_QRCode_Generator_using_html_css_javascripts</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="script.js"></script>
+      
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <div class="container">
+        <div class="left-pane">
+            <div class="setting">
+                <div class="input-wrap">
+                    <label for="qr-input">Enter text or URL:</label>
+                    <input type="text" id="qr-input" placeholder="Type your message or URL">
+                </div>
+                <div class="input-wrap">
+                    <label for="size">Size</label>
+                    <input type="range" id="size" min="50" max="250" value="1" >
+                </div>
+                <div class="input-wrap">
+                    <label>Width * Height</label>
+                    <input type="number" value="50" class="size-input" disabled>
+                     *
+                    <input type="number" value="50" class="size-input" disabled>                
+                </div>
+                <div class="input-wrap">
+                    <label for="logo">Logo</label>
+                    <input type="file" id="logo" >
+                </div>
+                   <div class="input-wrap">
+                    <label for="dot-mode">Dot Mode</label>
+                    <select id="dot-mode" >
+                        <option value="square">Square</option>
+                        <option value="dots">Dots</option>
+                        <option value="rounded">Rounded</option>
+                        <option value="extra-rounded">Extra Rounded</option>
+                        <option value="classy">Classy</option>
+                        <option value="classy-rounded">Classy Rounded</option>
+                    </select>
+                </div>
+                <div class="input-wrap">
+                    <label for="dot-color">Dots Color</label>
+                    <input type="color" id="dot-color" value="#000000">
+                </div>
+                <div class="input-wrap">
+                    <label for="bg-color"> Background Color</label>
+                    <input type="color" id="bg-color" value="#ffffff">
+                </div>
+            </div>
+        </div>
+    
+        <div class="right-pane">
+            <!-- Display QrCode  -->
+            <div id="qr-code"></div>
+
+            <div class="button-container">
+                <button id="generate-btn" onclick="generateQRCode()">Generate QR Code</button>
+                <button id="download-btn" onclick="downloadQRCode()">Download QR Code</button>
+            </div> 
+        </div>
+   </div>
+</body>
+</html>
