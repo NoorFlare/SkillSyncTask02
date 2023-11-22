@@ -107,5 +107,17 @@ button:hover {
 #download-btn {
     display: none;
 }
-
+// make responsive
+@media (max-width: 740px) { 
+    .left-pane {
+        width: 100%;
+    }
+    .right-pane {
+        width: 100%;
+    }
+    .container {
+        display: block;
+    }
+   
+}
 
